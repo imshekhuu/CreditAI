@@ -160,7 +160,7 @@ git clone https://github.com/yourusername/creditAI.git
 Move into the project folder:
 
 ``` bash
-cd credit-underwriting-ai
+cd creditAI
 ```
 
 Install dependencies:

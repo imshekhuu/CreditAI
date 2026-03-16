@@ -1,0 +1,63 @@
+{
+  "ai_analysis": {
+    "financial_summary": "### Financial Health Overview — Kinara Finance Pvt Ltd\n\nKinara Finance Pvt Ltd operates in the **NBFC** sector and has requested a loan of **₹25 Cr**.\n\n**Key Financial Metrics:**\n| Metric | Value | Assessment |\n|--------|-------|------------|\n| Revenue | ₹145.0 Cr | Strong |\n| Net Profit | ₹18.0 Cr | Healthy |\n| Total Debt | ₹70.0 Cr | Moderate |\n| Total Assets | ₹250.0 Cr | Strong base |\n| Cash Flow | ₹22.0 Cr | Positive |\n\n**Key Ratios:**\n- Profit Margin: **12.4%** ✅\n- Debt-to-Asset Ratio: **28.0%** ✅\n- Debt-to-Equity Ratio: **100.0%** ⚠️",
+    "loan_recommendation": "### Final Loan Recommendation\n\n**Decision: CONDITIONAL APPROVE**\n\nWe recommend **CONDITIONAL APPROVAL** of the ₹25 Cr loan for Kinara Finance Pvt Ltd. While the company shows decent fundamentals, there are areas of concern that require risk mitigation measures.\n\n**Conditions:**\n- Collateral coverage of at least 1.5x loan amount\n- Monthly financial reporting for the first year\n- Debt-to-equity covenant not to exceed 3.0x\n- Personal guarantee from promoters\n- Loan disbursement in tranches tied to milestones\n- Recommended interest rate: Base rate + 3.0-4.0%",
+    "risk_explanation": "### Risk Assessment Analysis\n\nThe ML credit scoring model has classified Kinara Finance Pvt Ltd as **Medium Risk** with a confidence of **97.89%**.\n\n**Risk Factors Analyzed:**\n\n1. **Revenue Stability**: The company shows strong revenue generation, suggesting a stable business model and market position.\n\n2. **Profitability**: Healthy profit margins indicate efficient operations and strong pricing power.\n\n3. **Debt Burden**: Moderate debt levels require careful monitoring, especially if additional borrowing is being considered.\n\n4. **Cash Flow Health**: Positive cash flow provides a comfortable buffer for loan servicing.",
+    "source": "simulated (no LLM configured)",
+    "swot_analysis": "### SWOT Analysis — Kinara Finance Pvt Ltd\n\n**💪 Strengths:**\n- Strong revenue base of ₹145.0 Cr provides solid foundation\n- Healthy profit margins demonstrate operational efficiency\n- Strong asset base of ₹250.0 Cr provides collateral value\n\n**⚠️ Weaknesses:**\n- Debt levels of ₹70.0 Cr require careful management\n- Profit margin of 12.4% could be improved\n- Cash flow constraints may limit operational flexibility\n\n**🚀 Opportunities:**\n- Market expansion in the NBFC sector with growing demand\n- Digital transformation initiatives could improve operational efficiency\n- Strategic partnerships could diversify revenue streams\n\n**🔴 Threats:**\n- Regulatory changes in the NBFC sector could impact operations\n- Economic slowdown could affect revenue growth and debt servicing\n- Increasing competition from fintech and digital-first players"
+  },
+  "company_overview": {
+    "company_age": "12",
+    "company_name": "Kinara Finance Pvt Ltd",
+    "loan_amount": "25",
+    "loan_purpose": "Debt Refinancing",
+    "sector": "NBFC"
+  },
+  "final_recommendation": {
+    "decision": "CONDITIONAL APPROVE",
+    "health_score": 91,
+    "risk_level": "Medium",
+    "summary": "Kinara Finance Pvt Ltd has applied for a loan of ₹25 Cr. Based on analysis of financial statements and ML risk modeling, the entity is classified as Medium Risk. Revenue stands at ₹145.0 Cr with a net profit of ₹18.0 Cr and total debt of ₹70.0 Cr."
+  },
+  "financial_summary": {
+    "health_score": 91,
+    "metrics": {
+      "assets": 250,
+      "cashflow": 22,
+      "debt": 70,
+      "liabilities": 180,
+      "profit": 18,
+      "revenue": 145
+    },
+    "ratios": {
+      "current_ratio": 1.39,
+      "debt_to_asset": 28,
+      "debt_to_equity": 100,
+      "profit_margin": 12.41,
+      "return_on_assets": 7.2
+    }
+  },
+  "report_metadata": {
+    "analyst": "AI Credit Underwriting System",
+    "generated_at": "2026-03-14T22:47:04.716642",
+    "report_id": "CUR-20260314224704",
+    "report_type": "Credit Underwriting Analysis",
+    "version": "1.0"
+  },
+  "risk_assessment": {
+    "all_probabilities": {
+      "High": 0,
+      "Low": 0.0211,
+      "Medium": 0.9789
+    },
+    "confidence": 97.89,
+    "feature_importance": {
+      "debt": 0.3516,
+      "profit": 0.326,
+      "revenue": 0.3224
+    },
+    "model_accuracy": 98,
+    "risk_level": "Medium",
+    "risk_probability": 0.9789
+  }
+}

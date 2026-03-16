@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AI-powered credit underwriting system for automated loan risk assessment and financial document analysis.">
+    <title>AI Credit Underwriting System</title>
+
+    <!-- Google Fonts: Inter + Material Symbols -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,1,0" rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+    <nav class="navbar" id="main-navbar">
+        <div class="navbar-brand">
+            <span class="material-symbols-rounded navbar-icon">monitoring</span>
+            <span class="navbar-title">CreditAI</span>
+            <span class="navbar-badge">Underwriting</span>
+        </div>
+        <div class="navbar-links">
+            <a href="#onboarding-section" class="nav-link active" data-section="onboarding">
+                <span class="material-symbols-rounded">assignment_ind</span>
+                Onboarding
+            </a>
+            <a href="#results-section" class="nav-link" data-section="results">
+                <span class="material-symbols-rounded">analytics</span>
+                Analysis
+            </a>
+            <a href="#report-section" class="nav-link" data-section="report">
+                <span class="material-symbols-rounded">summarize</span>
+                Report
+            </a>
+        </div>
+        <div class="navbar-status" id="pipeline-status">
+            <span class="status-dot"></span>
+            <span class="status-text">Ready</span>
+        </div>
+    </nav>
+
+    <!-- ================= MAIN CONTENT ================= -->
+    <main class="main-content">
+
+        <!-- ---- HERO / WELCOME ---- -->
+        <section class="hero-section" id="hero-section">
+            <div class="hero-content">
+                <div class="hero-badge">AI-POWERED</div>
+                <h1 class="hero-title">Credit Underwriting<br><span class="gradient-text">Intelligence Platform</span></h1>
+                <p class="hero-subtitle">Upload financial documents, extract key metrics, and get AI-powered credit risk assessments with explainable recommendations.</p>
+                <div class="hero-stats">
+                    <div class="hero-stat">
+                        <span class="hero-stat-value">< 30s</span>
+                        <span class="hero-stat-label">Analysis Time</span>
+                    </div>
+                    <div class="hero-stat">
+                        <span class="hero-stat-value">ML + LLM</span>
+                        <span class="hero-stat-label">Dual AI Engine</span>
+                    </div>
+                    <div class="hero-stat">
+                        <span class="hero-stat-value">6</span>
+                        <span class="hero-stat-label">Financial Metrics</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ---- PIPELINE STEPPER ---- -->
+        <section class="stepper-section">
+            <div class="stepper">
+                <div class="step active" id="step-1">
+                    <div class="step-number">1</div>
+                    <div class="step-label">Onboarding</div>
+                </div>
+                <div class="step-connector"></div>
+                <div class="step" id="step-2">
+                    <div class="step-number">2</div>
+                    <div class="step-label">Upload</div>
+                </div>
+                <div class="step-connector"></div>
+                <div class="step" id="step-3">
+                    <div class="step-number">3</div>
+                    <div class="step-label">Extract</div>
+                </div>
+                <div class="step-connector"></div>
+                <div class="step" id="step-4">
+                    <div class="step-number">4</div>
+                    <div class="step-label">Predict</div>
+                </div>
+                <div class="step-connector"></div>
+                <div class="step" id="step-5">
+                    <div class="step-number">5</div>
+                    <div class="step-label">AI Analysis</div>
+                </div>
+                <div class="step-connector"></div>
+                <div class="step" id="step-6">
+                    <div class="step-number">6</div>
+                    <div class="step-label">Report</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================== -->
+        <!--  SECTION 1: ENTITY ONBOARDING + PDF UPLOAD     -->
+        <!-- ============================================== -->
+        <section class="content-section" id="onboarding-section">
+            <div class="section-header">
+                <span class="material-symbols-rounded section-icon">assignment_ind</span>
+                <div>
+                    <h2 class="section-title">Entity Onboarding</h2>
+                    <p class="section-desc">Enter company details and upload financial documents for analysis.</p>
+                </div>
+            </div>
+
+            <div class="cards-grid two-col">
+                <!-- Company Form Card -->
+                <div class="card" id="company-form-card">
+                    <div class="card-header">
+                        <span class="material-symbols-rounded card-icon">domain</span>
+                        <h3 class="card-title">Company Information</h3>
+                    </div>
+                    <form id="company-form" class="form">
+                        <div class="form-group">
+                            <label for="company_name">Company Name</label>
+                            <input type="text" id="company_name" name="company_name" placeholder="e.g. Kinara Capital" required>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="sector">Sector / Industry</label>
+                                <select id="sector" name="sector" required>
+                                    <option value="">Select sector</option>
+                                    <option value="NBFC">NBFC</option>
+                                    <option value="Banking">Banking</option>
+                                    <option value="Fintech">Fintech</option>
+                                    <option value="Manufacturing">Manufacturing</option>
+                                    <option value="IT Services">IT Services</option>
+                                    <option value="Healthcare">Healthcare</option>
+                                    <option value="Real Estate">Real Estate</option>
+                                    <option value="Retail">Retail</option>
+                                    <option value="Agriculture">Agriculture</option>
+                                    <option value="Energy">Energy</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="company_age">Company Age (years)</label>
+                                <input type="number" id="company_age" name="company_age" placeholder="e.g. 10" min="0" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="loan_amount">Loan Amount (₹ Cr)</label>
+                                <input type="number" id="loan_amount" name="loan_amount" placeholder="e.g. 2" step="0.1" min="0" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="loan_purpose">Loan Purpose</label>
+                                <select id="loan_purpose" name="loan_purpose" required>
+                                    <option value="">Select purpose</option>
+                                    <option value="Business Expansion">Business Expansion</option>
+                                    <option value="Working Capital">Working Capital</option>
+                                    <option value="Equipment Purchase">Equipment Purchase</option>
+                                    <option value="Debt Refinancing">Debt Refinancing</option>
+                                    <option value="Infrastructure">Infrastructure</option>
+                                    <option value="R&D Investment">R&D Investment</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- PDF Upload Card -->
+                <div class="card" id="upload-card">
+                    <div class="card-header">
+                        <span class="material-symbols-rounded card-icon">upload_file</span>
+                        <h3 class="card-title">Upload Financial Document</h3>
+                    </div>
+                    <div class="upload-zone" id="upload-zone">
+                        <div class="upload-icon-wrap">
+                            <span class="material-symbols-rounded upload-icon">cloud_upload</span>
+                        </div>
+                        <p class="upload-text">Drag & drop PDF here or <span class="upload-browse">browse files</span></p>
+                        <p class="upload-hint">Supports: PDF financial statements (Max 100 MB)</p>
+                        <input type="file" id="pdf_file" name="pdf_file" accept=".pdf" hidden>
+                    </div>
+                    <div class="upload-info" id="upload-info" style="display:none;">
+                        <span class="material-symbols-rounded">description</span>
+                        <div class="upload-info-text">
+                            <span id="uploaded-filename">document.pdf</span>
+                            <span id="uploaded-size">0 KB</span>
+                        </div>
+                        <button class="btn-icon" id="remove-file" title="Remove file">
+                            <span class="material-symbols-rounded">close</span>
+                        </button>
+                    </div>
+                    <div class="upload-note">
+                        <span class="material-symbols-rounded">info</span>
+                        PDF upload is optional. Demo data will be used if no document is provided.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="action-bar">
+                <button class="btn btn-primary btn-lg" id="btn-submit" onclick="submitAndAnalyze()">
+                    <span class="material-symbols-rounded">rocket_launch</span>
+                    Start Analysis Pipeline
+                </button>
+            </div>
+        </section>
+
+        <!-- ============================================== -->
+        <!--  SECTION 2: RESULTS DASHBOARD                  -->
+        <!-- ============================================== -->
+        <section class="content-section hidden" id="results-section">
+            <div class="section-header">
+                <span class="material-symbols-rounded section-icon">analytics</span>
+                <div>
+                    <h2 class="section-title">Analysis Dashboard</h2>
+                    <p class="section-desc" id="analysis-company-name">Financial metrics, risk assessment, and AI-powered insights.</p>
+                </div>
+            </div>
+
+            <!-- Financial Metrics Dashboard -->
+            <div class="subsection-title">
+                <span class="material-symbols-rounded">account_balance</span>
+                Financial Metrics
+            </div>
+            <div class="cards-grid three-col" id="financial-metrics-grid">
+                <!-- Filled dynamically by JS -->
+            </div>
+
+            <!-- Risk Prediction -->
+            <div class="cards-grid two-col" style="margin-top: 2rem;">
+                <!-- Risk Gauge Card -->
+                <div class="card card-risk" id="risk-card">
+                    <div class="card-header">
+                        <span class="material-symbols-rounded card-icon">shield</span>
+                        <h3 class="card-title">ML Risk Prediction</h3>
+                    </div>
+                    <div class="risk-gauge-container">
+                        <div class="risk-gauge" id="risk-gauge">
+                            <svg viewBox="0 0 200 120" class="gauge-svg">
+                                <path d="M 20 100 A 80 80 0 0 1 180 100" fill="none" stroke="var(--surface-3)" stroke-width="16" stroke-linecap="round"/>
+                                <path d="M 20 100 A 80 80 0 0 1 180 100" fill="none" stroke="url(#gaugeGradient)" stroke-width="16" stroke-linecap="round" stroke-dasharray="251" stroke-dashoffset="251" id="gauge-fill"/>
+                                <defs>
+                                    <linearGradient id="gaugeGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                                        <stop offset="0%" style="stop-color:#22c55e"/>
+                                        <stop offset="50%" style="stop-color:#eab308"/>
+                                        <stop offset="100%" style="stop-color:#ef4444"/>
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                            <div class="gauge-value" id="gauge-value">—</div>
+                            <div class="gauge-label" id="gauge-label">Risk Level</div>
+                        </div>
+                        <div class="risk-details" id="risk-details">
+                            <!-- Filled by JS -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Risk Probabilities Card -->
+                <div class="card" id="risk-probs-card">
+                    <div class="card-header">
+                        <span class="material-symbols-rounded card-icon">bar_chart</span>
+                        <h3 class="card-title">Risk Probability Breakdown</h3>
+                    </div>
+                    <div class="prob-bars" id="prob-bars">
+                        <!-- Filled by JS -->
+                    </div>
+                    <div class="feature-importance" id="feature-importance">
+                        <!-- Filled by JS -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- AI Analysis Panels -->
+            <div class="subsection-title" style="margin-top: 2rem;">
+                <span class="material-symbols-rounded">psychology</span>
+                AI-Powered Analysis
+            </div>
+
+            <!-- Tabs for analysis sections -->
+            <div class="analysis-tabs" id="analysis-tabs">
+                <button class="tab active" data-tab="financial-summary-tab" onclick="switchTab(this)">
+                    <span class="material-symbols-rounded">receipt_long</span>
+                    Financial Summary
+                </button>
+                <button class="tab" data-tab="risk-explanation-tab" onclick="switchTab(this)">
+                    <span class="material-symbols-rounded">warning</span>
+                    Risk Explanation
+                </button>
+                <button class="tab" data-tab="swot-tab" onclick="switchTab(this)">
+                    <span class="material-symbols-rounded">grid_view</span>
+                    SWOT Analysis
+                </button>
+                <button class="tab" data-tab="recommendation-tab" onclick="switchTab(this)">
+                    <span class="material-symbols-rounded">thumb_up</span>
+                    Recommendation
+                </button>
+            </div>
+
+            <div class="tab-content" id="tab-content">
+                <div class="tab-pane active" id="financial-summary-tab"></div>
+                <div class="tab-pane" id="risk-explanation-tab"></div>
+                <div class="tab-pane" id="swot-tab"></div>
+                <div class="tab-pane" id="recommendation-tab"></div>
+            </div>
+        </section>
+
+        <!-- ============================================== -->
+        <!--  SECTION 3: FINAL REPORT                       -->
+        <!-- ============================================== -->
+        <section class="content-section hidden" id="report-section">
+            <div class="section-header">
+                <span class="material-symbols-rounded section-icon">summarize</span>
+                <div>
+                    <h2 class="section-title">Underwriting Report</h2>
+                    <p class="section-desc">Complete credit underwriting analysis report.</p>
+                </div>
+            </div>
+
+            <!-- Report Header Card -->
+            <div class="card report-header-card" id="report-header-card">
+                <div class="report-header-content">
+                    <div class="report-id" id="report-id">Report #—</div>
+                    <div class="report-date" id="report-date">—</div>
+                </div>
+                <div class="report-decision-banner" id="report-decision-banner">
+                    <span class="material-symbols-rounded" id="report-decision-icon">pending</span>
+                    <span class="report-decision-text" id="report-decision-text">Pending</span>
+                </div>
+            </div>
+
+            <!-- Report Content -->
+            <div class="report-body" id="report-body">
+                <!-- Filled by JS -->
+            </div>
+
+            <!-- Download Button -->
+            <div class="action-bar">
+                <button class="btn btn-primary btn-lg" id="btn-download" onclick="downloadReport()">
+                    <span class="material-symbols-rounded">download</span>
+                    Download Report (JSON)
+                </button>
+                <button class="btn btn-outline btn-lg" onclick="resetPipeline()">
+                    <span class="material-symbols-rounded">restart_alt</span>
+                    New Analysis
+                </button>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ================= LOADING OVERLAY ================= -->
+    <div class="loading-overlay hidden" id="loading-overlay">
+        <div class="loading-card">
+            <div class="loading-spinner"></div>
+            <div class="loading-title" id="loading-title">Processing...</div>
+            <div class="loading-subtitle" id="loading-subtitle">Please wait while we analyze the data.</div>
+            <div class="loading-progress-bar">
+                <div class="loading-progress-fill" id="loading-progress-fill"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ================= TOAST NOTIFICATION ================= -->
+    <div class="toast-container" id="toast-container"></div>
+
+    <!-- JavaScript -->
+    <script src="/static/js/main.js"></script>
+
+</body>
+</html>

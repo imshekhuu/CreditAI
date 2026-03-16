@@ -118,16 +118,16 @@ Credit Underwriting Report
 <div align="center">
 
 ### 🏠 Dashboard / Landing Page
-<img src="screenshots/dashboard.png" width="700"/>
+<img src="screenshots/dashboard.jpg" width="700"/>
 
 ### 📄 Document Upload Interface
-<img src="screenshots/upload.png" width="700"/>
+<img src="screenshots/upload.jpg" width="700"/>
 
 ### 📊 Financial Data Extraction Dashboard
-<img src="screenshots/extraction.png" width="700"/>
+<img src="screenshots/extraction.jpg" width="700"/>
 
 ### 🤖 AI Risk Prediction & Recommendation
-<img src="screenshots/prediction.png" width="700"/>
+<img src="screenshots/prediction.jpg" width="700"/>
 
 </div>
 

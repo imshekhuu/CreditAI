@@ -13,10 +13,10 @@ recommendation** using a Large Language Model (LLM).
 # 🌐 Live Demo
 
 🔗 **Live Application:**\
-https://your-huggingface-space.hf.space
+https://huggingface.co/spaces/ImShekhuu/CreditAI
 
 🔗 **GitHub Repository:**\
-https://github.com/yourusername/credit-underwriting-ai
+https://github.com/imshekhuu/CreditAI
 
 ------------------------------------------------------------------------
 
@@ -115,23 +115,21 @@ Credit Underwriting Report
 
 # 📸 Application Screenshots
 
-::: {align="center"}
-### 🏠 Dashboard / Landing Page
+<div align="center">
 
-`<img src="screenshots/dashboard.png" width="700">`{=html}
+### 🏠 Dashboard / Landing Page
+<img src="screenshots/dashboard.png" width="700"/>
 
 ### 📄 Document Upload Interface
-
-`<img src="screenshots/upload.png" width="700">`{=html}
+<img src="screenshots/upload.png" width="700"/>
 
 ### 📊 Financial Data Extraction Dashboard
-
-`<img src="screenshots/extraction.png" width="700">`{=html}
+<img src="screenshots/extraction.png" width="700"/>
 
 ### 🤖 AI Risk Prediction & Recommendation
+<img src="screenshots/prediction.png" width="700"/>
 
-`<img src="screenshots/prediction.png" width="700">`{=html}
-:::
+</div>
 
 ------------------------------------------------------------------------
 
@@ -156,7 +154,7 @@ Produce Final Credit Report
 Clone the repository:
 
 ``` bash
-git clone https://github.com/yourusername/credit-underwriting-ai.git
+git clone https://github.com/yourusername/creditAI.git
 ```
 
 Move into the project folder:
@@ -196,7 +194,7 @@ Steps:
 
 Example live URL:
 
-https://your-space-name.hf.space
+https://huggingface.co/spaces/ImShekhuu/CreditAI
 
 ------------------------------------------------------------------------
 
@@ -226,5 +224,5 @@ learning and LLMs can automate financial decision-making.
 
 # 📬 Contact
 
-LinkedIn: https://linkedin.com/in/yourprofile\
-Email: your@email.com
+LinkedIn: https://linkedin.com/in/divyasinghshekhawat\
+Email: divyasinghwork16@email.com
